@@ -667,8 +667,10 @@ function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,100)}
                 var href = $(this).attr('href');
 				
 				if (href.indexOf('#') != -1) {
+                    console.log('Click Trigger 1')
                     $('#middle-bar .inner-nav-toggle').removeClass('opened');
                     if ($('#middle-bar .inner-nav-toggle').css('display') !== 'none') {
+                        console.log('Click Trigger 2')
                         $('#middle-bar .listing-menu').slideUp(500, function() {
                             Spaces.headerHeight = $('#page-head').height();
                             $('.inner-nav-toggle').text(Page.name);
@@ -680,6 +682,7 @@ function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,100)}
                             });
                         });
                     } else {
+                        console.log('Click Trigger 3')
                         $('html, body').scrollTo(href, 1500, {
                             offset: {
                                 'top': -Spaces.headerHeight
@@ -688,6 +691,7 @@ function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,100)}
                         });
                     }
                 } else {
+                    console.log('Click Trigger 4s')
                     window.open(href, '_self');
                 }
 				
