@@ -707,9 +707,9 @@ function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,100)}
                 $(this).closest('.listing-menu').find('a').removeClass('active');
                 $(this).addClass('active');
                 var href = $('a[name="' + $(this).attr('href') + '"]');
-                var href = $(this).attr('href'),
-                    hrefOffset = $(`${href}`).offset().top,
+                var hrefOffset = href.offset().top,
                     finalOffset = hrefOffset - Spaces.headerHeight;
+                    
 
                 $('#middle-bar .inner-nav-toggle').removeClass('opened');
                 if ($('#middle-bar .inner-nav-toggle').css('display') !== 'none') {
