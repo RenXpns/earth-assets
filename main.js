@@ -668,6 +668,7 @@ function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,100)}
 				
 				if (href.indexOf('#') != -1) {
                     console.log('Click Trigger 1')
+                    console.log($('#middle-bar .inner-nav-toggle').css('display'))
                     $('#middle-bar .inner-nav-toggle').removeClass('opened');
                     if ($('#middle-bar .inner-nav-toggle').css('display') !== 'none') {
                         console.log('Click Trigger 2')
